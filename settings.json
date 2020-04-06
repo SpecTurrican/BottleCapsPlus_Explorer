@@ -1,0 +1,176 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "BottleCapsPlus",
+
+  "address": "https://caps.ddns.net",
+
+  // coin name
+  "coin": "BottleCapsPlus",
+
+  // coin symbol
+  "symbol": "CAPS",
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options:
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "United",
+
+  // port to listen for requests on.
+  "port" : 3001,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "BottlecapsplusDB",
+    "password": "Jqr34Jkr9093Bvdsw2",
+    "database": "explorerdbcaps",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+  "block_parallel_tasks": 1,
+
+  // wallet settings
+  "use_rpc": true,
+
+  "wallet": {
+    "host": "localhost",
+    "port": 7702,
+    "username": "Bottlecapsplusrpc",
+    "password": "QxZ765JklBBoO345y"
+  },
+
+  // confirmations
+  "confirmations": 40,
+
+  // language settings
+  "locale": "locale/en.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": false,
+    "richlist": true,
+    "twitter": false,
+    "facebook": false,
+    "googleplus": false,
+    "youtube": false,
+    "search": true,
+    "movement": true,
+    "network": true
+  },
+
+  // index page (valid options for difficulty are POW, POS or Hybrid)
+  "index": {
+    "show_hashrate": true,
+     // Show Market Cap in header
+    "show_market_cap": false,
+    // Show Market Cap in place of price box
+    "show_market_cap_over_price": false,
+    "difficulty": "Hybrid",
+    "last_txs": 100,
+    "txs_per_page": 20
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 444444,
+    "blockhash": "4b0631ca36b0ee174f3c21bbe4d38b1d41d0730dd62bcefca54115497aad74de",
+    "txhash": "009acd6939293008db69fdc57e3fd00e418f6810b94c019103a8d05f21275acc",
+    "address": "EsCXJ7JExZjCsSe1fMJtMqeqZcyhnQTPun"
+  },
+
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "CAPS",
+    "exchange": "BTC",
+    "enabled": ["bittrex"],
+    "cryptopia_id": "1658",
+    "ccex_key" : "Get-Your-Own-Key",
+    "default": "bittrex"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": false,
+    "balance": true
+  },
+  // movement page settings
+  // min amount: show transactions greater than this value
+  // low flag: greater than this value flagged yellow
+  // high flag: greater than this value flagged red
+  "movement": {
+    "min_amount": 1000,
+    "low_flag": 10000,
+    "high_flag": 50000
+  },
+
+  // twitter, facebook, googleplus, youtube
+  "twitter": "iquidus",
+  "facebook": "yourfacebookpage",
+  "googleplus": "yourgooglepluspage",
+  "youtube": "youryoutubechannel",
+
+  //genesis
+  "genesis_tx": "0f57ee6b3f9d5fccb5e974360ef159f06b01b86b99a4294533e9e21aeddf7a83",
+  "genesis_block": "0000002b9c00e15b29d5f1d811618fed1375390c83f011d92a544bd7425fd51c",
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //disable saving blocks & TXs via API during indexing.
+  "lock_during_index": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+  "txcount_per_page": 50,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": false,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  // TXOUTSET : retreive from gettxoutsetinfo api call
+  "supply": "BALANCES",
+  
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "netmhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "M",
+
+  // Address labels
+  // example : "JhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  "labels": {
+  //  "JSoEdU717hvz8KQVq2HfcqV9A79Wihzusu": {"label": "Developers address", "type":"primary", "url":"http://example.com"},
+  //  "JSWVXHWeYNknPdG9uDrcBoZHztKMFCsndw": {"label": "Cryptsy"}
+  }
+}
+
